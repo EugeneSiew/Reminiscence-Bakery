@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Contact Us</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/contact_us.css">
+    <script src="./js/feedback.js" async and defer></script>
+</head>
+
+<!--Header-->
+<header>
+    <div class="wrapper">
+        <a href="./home.html"><img src="./Icons/Logo.PNG" , alt="Logo" , class="logo"></a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="about_us.html"><b>About Us</b></a></li>
+                <li><a href="menu.html"><b>Menu</b></a></li>
+                <li><a href="contact_us.html"><b>Contact Us</b></a>
+            </ul>
+        </nav>
+        <div class="headerbutton">
+            <a href="./cart.html"><img src="./Icons/Shopping Cart.svg" alt="Cart" width="25" , height="25"></a>
+            <a href="./log_in.html"><img src="./Icons/Profile.svg" alt="Profile" width="25" , height="25"></a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!--FAQ section-->
+    <section>
+        <h2><b>Frequently Asked Question (FAQ)</b></h2>
+        <div class="detailswrapper">
+            <details>
+                <summary><b>Does your bakery use any artificial flavourings or colourings?</b></summary>
+                <p>Absolutely not! We use 100% fresh and real flavourings extracted from raw ingredients.</p>
+            </details>
+
+            <details>
+                <summary><b>Which area do you deliver to?</b></summary>
+                <p>Currently we only provide delivery services to customers who are in the <b>Klang Valley</b> area,
+                    including
+                    the <b>Federal Territory of Kuala Lumpur</b> and <b>Petaling Jaya</b>.
+                    We currently do not offer international delivery service. Customers are subject to the delivery
+                    cost.
+                    However, orders in a single receipt of over RM30 will receive free delivery
+
+                </p>
+            </details>
+
+            <details>
+                <summary><b>Am I able to self pick-up?</b></summary>
+                <p>Yes, self pick-up is available at our bakery at Ground Floor, Sunway University from 9 am to 7
+                    pm. Full address here:<br>
+                    <a href="https://www.google.com/maps/place/Sunway+University/@3.0670776,101.6035404,15z/data=!4m5!3m4!1s0x0:0x77612fa0225cad69!8m2!3d3.0670776!4d101.6035404"
+                        target="_blank">5, Jalan Universiti, Bandar Sunway, 47500 Petaling Jaya, Selangor.</a>
+                </p>
+            </details>
+
+            <details>
+                <summary><b>Payment Method?</b></summary>
+                <p>Currently, we accept online banking &amp; Touch &rsquo;n Go eWallet.</p>
+            </details>
+        </div>
+
+    </section>
+
+    <!--Contact Us Section-->
+    <section>
+        <div class="contactwrapper">
+            <div class="infowrapper">
+                <h2><b>Contact Us</b></h2>
+                <ul class="contact">
+                    <li>
+                        <img src="./Icons/envelope-solid.svg" alt="Envelope Logo" width="20"
+                            height="20">&nbsp;&nbsp;&nbsp;&nbsp;reminiscent@gmail.com
+                    </li>
+                    <li>
+                        <img src="./Icons/phone-flip-solid.svg" alt="Phone Sign" width="20"
+                            height="20">&nbsp;&nbsp;&nbsp;&nbsp;+&nbsp;60 123 456789
+                    </li>
+                    <li>
+                        <img src="./Icons/map-location-solid.svg" alt="Map Logo" width="20"
+                            height="20">&nbsp;&nbsp;&nbsp;&nbsp;<a
+                            href="https://www.google.com/maps/place/Sunway+University/@3.0670776,101.6035404,15z/data=!4m5!3m4!1s0x0:0x77612fa0225cad69!8m2!3d3.0670776!4d101.6035404"
+                            target="_blank">5, Jalan Universiti, Bandar Sunway, 47500 Petaling Jaya, Selangor.</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="feedbackwrapper">
+                <form name="feedbackForm" id="feedbackForm" onsubmit="return validate()">
+                    <h2 class="moveleft">Send us your feedback!</h2>
+                    <div id="feedback_info" class="feedback"></div><br>
+                    <label for="contact_name">Full Name:</label>
+                    <input type="text" placeholder="Your Name" class="name" id="contact_name" name="user_contact_name"
+                        required oninvalid="this.setCustomValidity('Please enter your name.')"
+                        oninput="this.setCustomValidity('')"><br><br>
+
+                    <label for="contact_email">Email: </label>
+                    <input type="email" placeholder="Your Email" class="name" id="contact_email"
+                        name="user_contact_email" required
+                        oninvalid="this.setCustomValidity('Please enter your email address.')"
+                        oninput="this.setCustomValidity('')"><br><br>
+
+                    <label for="feedback">Message: </label>
+                    <textarea name="Message" placeholder="Leave your message here" rows="5" cols="40" class="msg" id="feedback"
+                        name="user_feedback" required
+                        oninvalid="this.setCustomValidity('Please enter your feedback.')"
+                        oninput="this.setCustomValidity('')"></textarea><br><br>
+
+                    <div class="spacebottom"></div>
+                    <button type="submit" class="button">Submit</button>
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+</main>
+
+<footer>
+    <div class="footer">
+        <!--Left side of footer (Join mailing list and follow socials)-->
+        <div class="socialswrapper">
+            <form name="subscribeForm" onsubmit="return ValidateEmail()">
+                <div class="emailwrapper">
+                    <span class="emailheadfont"><strong>Get Latest Updates from Us!</strong></span>
+                    <input type="email" placeholder="Your email" class="email" required id="email" name="email"
+                        oninvalid="this.setCustomValidity('Please enter your email address')"
+                        oninput="this.setCustomValidity('')">
+                    <div id="email_error" class="emailmsg"></div>
+                    <div class="spacebottom"></div>
+                    <button type="submit" class="button" value="Submit">Subscribe</button>
+                </div>
+            </form>
+            <span class="emailheadfont"><strong>Follow Us On Our Socials!</strong></span>
+            <div class="socialmedia">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Icons/Instagram Logo.png" alt="Ig Logo"
+                        width="auto" height="30"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Icons/Facebook Logo.png" alt="Fb Logo"
+                        width="auto" height="30"></a>
+            </div>
+        </div>
+        <!--Middle section of footer (sitemap)-->
+        <div class="sitemapwrapper">
+            <span class="headfont"><strong>Categories</strong></span>
+            <ul class="sitemap">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Logo + Contact Information-->
+        <div class="logowrapper">
+            <img src="./Icons/Logo.PNG" , alt="Logo" , class="logo">
+            <ul class="sitemap">
+                <li><img src="./Icons/phone-flip-solid.svg" alt="Phone Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;+60
+                    123
+                    456789</li>
+                <li><img src="./Icons/envelope-solid.svg" alt="Envelope Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;reminiscent@gmail.com</li>
+            </ul>
+        </div>
+
+    </div>
+    <span class="copyright"><i>Reminiscent Bakery &copy; All Rights Reserved.</i></span>
+</footer>
+
+</html>

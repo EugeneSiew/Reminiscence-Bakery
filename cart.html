@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>View Cart</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/cart.css">
+    <script src="./js/basic.js" async and defer></script>
+</head>
+
+<!--Header-->
+<header>
+    <div class="wrapper">
+        <a href="./home.html"><img src="./Icons/Logo.PNG" , alt="Logo" , class="logo"></a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="about_us.html"><b>About Us</b></a></li>
+                <li><a href="menu.html"><b>Menu</b></a></li>
+                <li><a href="contact_us.html"><b>Contact Us</b></a>
+            </ul>
+        </nav>
+        <div class="headerbutton">
+            <a href="./cart.html"><img src="./Icons/Shopping Cart.svg" alt="Cart" width="25" , height="25"></a>
+            <a href="./log_in.html"><img src="./Icons/Profile.svg" alt="Profile" width="25" , height="25"></a>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <!--View Cart Section-->
+    <section>
+        <div class="tablewrapper">
+            <table>
+                <div>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                        </tr>
+                    </thead>
+                </div>
+                <tbody>
+                    <tr>
+                        <td class="productwrapper">
+                            <div class="addspace">
+                                <button type="reset" class="minus">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                                        <path
+                                            d="M0 256C0 114.6 114.6 0 256 0C397.4 0 512 114.6 512 256C512 397.4 397.4 512 256 512C114.6 512 0 397.4 0 256zM168 232C154.7 232 144 242.7 144 256C144 269.3 154.7 280 168 280H344C357.3 280 368 269.3 368 256C368 242.7 357.3 232 344 232H168z" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <img src="./Cakes/Coffee Chiffon.jpg" alt="Coffee Chiffon Cake" width="auto" height="100">
+                            <a href="./Cake Description/Coffee_Chiffon.html"><b>Coffee Chiffon Cake</b></a>
+                        </td>
+                        <td>
+                            <input type="number" min="0" placeholder="1" class="quantity">
+                        </td>
+                        <td>
+                            RM 10
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="2" class="spaceright"><b>Total</b></td>
+                        <td><b>RM 10</b></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <div class="alignright">
+                <a href="./delivery_information.html" class="checkout">Checkout&nbsp;
+                    <svg class="arrowicon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path
+                            d="M416 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c17.67 0 32 14.33 32 32v256c0 17.67-14.33 32-32 32h-64c-17.67 0-32 14.33-32 32s14.33 32 32 32h64c53.02 0 96-42.98 96-96V128C512 74.98 469 32 416 32zM342.6 233.4l-128-128c-12.51-12.51-32.76-12.49-45.25 0c-12.5 12.5-12.5 32.75 0 45.25L242.8 224H32C14.31 224 0 238.3 0 256s14.31 32 32 32h210.8l-73.38 73.38c-12.5 12.5-12.5 32.75 0 45.25s32.75 12.5 45.25 0l128-128C355.1 266.1 355.1 245.9 342.6 233.4z" />
+                    </svg></a>
+            </div>
+        </div>
+    </section>
+
+
+
+</main>
+
+<footer>
+    <div class="footer">
+        <!--Left side of footer (Join mailing list and follow socials)-->
+        <div class="socialswrapper">
+            <form name="subscribeForm" onsubmit="return ValidateEmail()">
+                <div class="emailwrapper">
+                    <span class="emailheadfont"><strong>Get Latest Updates from Us!</strong></span>
+                    <input type="email" placeholder="Your email" class="email" required id="email" name="email"
+                        oninvalid="this.setCustomValidity('Please enter your email address')"
+                        oninput="this.setCustomValidity('')">
+                    <div id="email_error" class="emailmsg"></div>
+                    <div class="spacebottom"></div>
+                    <button type="submit" class="button" value="Submit">Subscribe</button>
+                </div>
+            </form>
+
+            <span class="emailheadfont"><strong>Follow Us On Our Socials!</strong></span>
+            <div class="socialmedia">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Icons/Instagram Logo.png" alt="Ig Logo"
+                        width="auto" height="30"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Icons/Facebook Logo.png" alt="Fb Logo"
+                        width="auto" height="30"></a>
+            </div>
+        </div>
+        <!--Middle section of footer (sitemap)-->
+        <div class="sitemapwrapper">
+            <span class="headfont"><strong>Categories</strong></span>
+            <ul class="sitemap">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Logo + Contact Information-->
+        <div class="logowrapper">
+            <img src="./Icons/Logo.PNG" , alt="Logo" , class="logo">
+            <ul class="sitemap">
+                <li><img src="./Icons/phone-flip-solid.svg" alt="Phone Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;+60
+                    123
+                    456789</li>
+                <li><img src="./Icons/envelope-solid.svg" alt="Envelope Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;reminiscent@gmail.com</li>
+            </ul>
+        </div>
+
+    </div>
+    <span class="copyright"><i>Reminiscent Bakery &copy; All Rights Reserved.</i></span>
+</footer>
+</html>

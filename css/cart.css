@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin:wght@500&display=swap');
+
+/*CSS for navbar*/
+html, body{
+    margin: 0;
+}
+main{
+    width: 85%;
+    margin: 75px 7.5%;
+    
+
+}
+header{
+    background-color: #d1c1a9;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: auto;
+    width: auto;
+    min-width: fit-content;
+    min-height: fit-content;
+    width: 85%;
+    margin: 0 7.5%;
+}
+
+.navbar{
+    font-size: 1.24em;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.navbar li{
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar li a{
+    text-decoration: none;
+    font-family: "Libre Franklin", sans-serif;
+    transition: 0.3s;
+    padding: 20px 25px;
+    color: #673709;
+}
+
+.navbar li a:hover{
+    background-color: #b69d77;
+}
+
+.logo{
+    display: block;
+    width: auto;
+    max-height: 125px;
+    height: auto;
+    position: relative;
+    border-radius: 50%;
+    padding: 10px 0px;
+
+}
+
+
+.headerbutton a{
+    padding: 0px 10px;
+}
+
+/*CSS for main*/
+.tablewrapper{
+    margin: 0 7.5%;
+    width: 85%;
+
+}
+
+.tablewrapper a{
+    text-align: right;
+}
+
+table{
+    width: 100%;
+    border-spacing: 30px;
+    border-collapse: collapse;
+    margin-bottom: 30px;
+}
+
+th{
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    font-size: 19px;
+    text-align: center;
+}
+
+thead{
+    background-color: rgba(227,217,202, 0.7);
+}
+
+thead th{
+    padding: 30px 0;
+}
+
+td{
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    color: #563011;
+    font-size: 16px;
+    padding: 30px;
+}
+
+tfoot{
+    border-top: 0.5px solid;
+}
+
+.quantity{
+    max-width: 75px;
+    height: 30px;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    color: #563011;
+    font-size: 15px;
+    border: 1px solid rgba(103, 55, 9, 0.5);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+
+.quantity:focus{
+    border: 2px solid rgba(103, 55, 9, 0.7);
+}
+
+.productwrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+
+
+.productwrapper a{
+    text-decoration: none;
+    color: #563011;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+.productwrapper a:hover{
+    color: #c89d98;
+}
+
+tfoot tr td:first-child{
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    font-size: 19px;
+    text-align: right;
+}
+
+.spaceright{
+    padding-right: 70px;
+}
+
+td img{
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0,0,0,.4);
+}
+
+.addspace{
+    padding-right: 10px;
+}
+
+.minus{
+    width: 15px;
+    height: 15px;
+    border: none;
+    border-radius: 48%;
+    background-color: transparent;
+}
+
+.minus svg{
+    fill: rgba(0, 0, 0, 0.5);
+    width: 15px;
+    height: 15px;
+    transition: 0.15s;
+}
+
+.minus svg:hover{
+    fill: rgba(0, 0, 0, 1);
+}
+
+.checkout{
+    background-color: #98abc8;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+    width: fit-content;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.15s;
+}
+
+.checkout:hover{
+    background-color: #4E3524;
+    fill: white;
+    color: white;
+    cursor: pointer;
+}
+
+.arrowicon{
+    max-width: 15px;
+    max-height: 15px;
+    vertical-align: middle;
+    padding-bottom: 3px;
+}
+
+.alignright{
+    text-align: right;
+}
+
+
+/*CSS for footer*/
+footer{
+    background-color: #d1c1a9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer{
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+    width: auto;
+    min-width: fit-content;
+    min-height: fit-content;
+    width: 85%;
+    margin: 4% 7.5% ;
+}
+
+@media screen and (max-width: 880px) {
+    .wrapper{
+        flex-direction: column;
+    }
+
+    main {
+        overflow: auto;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .footer{
+        flex-direction: column;
+    }
+}
+
+/*Email & Social Media Section*/
+.socialswrapper{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    
+}
+
+
+.headfont{
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    font-size: 19px;
+}
+
+.emailheadfont{
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    font-size: 19px;
+    padding-bottom: 30px;
+    
+}
+.email {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.email:focus{
+    border: 3px solid rgba(103, 55, 9, 0.75);
+}
+
+.emailwrapper{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+
+}
+
+.emailmsg {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    display: none;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.emailmsg.failure{
+    color: #d9534f;
+    background-color: #ffcccb;
+    display: block;
+}
+
+.spacebottom{
+    padding-bottom: 10px;
+}
+
+input:focus{
+    outline: 0;
+}
+
+.button{
+    background-color: #98abc8;
+    font-family: 'Libre Baskerville', serif;
+    width: fit-content;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.15s;
+}
+
+.button:hover{
+    background-color: #4E3524;
+    color: white;
+}
+
+
+.socialmedia{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/*Sitemap*/
+.sitemapwrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.sitemap {
+    font-size: 16px;
+    list-style-type: none;
+    padding-inline-start: 0px;
+    
+}
+
+.sitemap li{
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    line-height: 3.0;
+}
+
+.sitemap li img{
+    vertical-align: middle;
+}
+
+.sitemap li a{
+    text-decoration: none;
+    color: #673709;
+    transition: 0.15s;
+   
+}
+
+.sitemap li a:hover{
+    color: #c89d98;
+}
+
+/*Copyright Line*/
+.copyright{
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 10px;
+    padding: 5px 0;
+    background-color: #673709;
+    color: white;
+}
+

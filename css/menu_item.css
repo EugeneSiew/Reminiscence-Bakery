@@ -1,0 +1,342 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Libre+Franklin:wght@500&display=swap');
+
+/*CSS for navbar*/
+html,
+body {
+    margin: 0;
+}
+
+main {
+    width: 85%;
+    margin: 75px 7.5%;
+    overflow-x: auto;
+}
+
+header {
+    background-color: #d1c1a9;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    height: auto;
+    width: auto;
+    min-width: fit-content;
+    min-height: fit-content;
+    width: 85%;
+    margin: 0 7.5%;
+}
+
+.navbar {
+    font-size: 1.24em;
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.navbar li {
+    display: inline-block;
+    text-align: center;
+}
+
+.navbar li a {
+    text-decoration: none;
+    font-family: "Libre Franklin", sans-serif;
+    transition: 0.3s;
+    padding: 20px 25px;
+    color: #673709;
+}
+
+.navbar li a:hover {
+    background-color: #b69d77;
+}
+
+.logo {
+    display: block;
+    width: auto;
+    max-height: 125px;
+    height: auto;
+    position: relative;
+    border-radius: 50%;
+    padding: 10px 0px;
+
+}
+
+
+.headerbutton a {
+    padding: 0px 10px;
+}
+
+
+/*CSS for main*/
+.box {
+    position: relative;
+    margin: 10% 25%;
+    width: 50%;
+    text-align: center;
+}
+
+.close {
+    color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    text-decoration: none;
+    transition: 0.15s ease-out;
+}
+
+.close:hover {
+    color: rgba(0, 0, 0, 1);
+}
+
+h2,
+h3 {
+    color: #673709;
+    font-family: 'Libre Franklin', sans-serif;
+    text-align: center;
+}
+
+h3 {
+    text-decoration: underline;
+}
+
+p {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 15px;
+    line-height: 1.75;
+    color: #563011;
+    text-align: left;
+    padding-left: 40px;
+}
+
+.itemwrapper {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.quantity {
+    max-width: 75px;
+    height: 30px;
+    text-align: center;
+    font-family: 'Libre Baskerville', serif;
+    color: #563011;
+    font-size: 15px;
+    border: 1px solid rgba(103, 55, 9, 0.5);
+    border-radius: 10px;
+    transition: 0.25s;
+}
+
+
+.quantity:focus {
+    border: 2px solid rgba(103, 55, 9, 0.7);
+}
+
+.addbutton {
+    background-color: #98abc8;
+    font-family: 'Libre Baskerville', serif;
+    width: max-content;
+    padding: 5px 20px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.15s;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+.addbutton:hover {
+    background-color: #4E3524;
+    transition: 0.15s;
+    fill: white;
+    color: white;
+    cursor: pointer;
+}
+
+.checkoutcart {
+    max-width: 15px;
+    max-height: 15px;
+    vertical-align: middle;
+    padding-bottom: 3px;
+    padding-right: 15px;
+}
+
+.space {
+    margin-bottom: 10px;
+}
+
+main img {
+    border-radius: 20px;
+    box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, .4);
+    align-self: flex-start;
+    margin-top: 20px;
+}
+
+/*CSS for footer*/
+footer {
+    background-color: #d1c1a9;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.footer {
+    display: flex;
+    align-content: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    height: auto;
+    width: auto;
+    min-width: fit-content;
+    min-height: fit-content;
+    width: 85%;
+    margin: 4% 7.5%;
+}
+@media screen and (max-width: 880px) {
+    .wrapper{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .footer{
+        flex-direction: column;
+    }
+}
+
+/*Email & Social Media Section*/
+.socialswrapper {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+
+}
+
+
+.headfont {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    font-size: 19px;
+}
+
+.emailheadfont {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    font-size: 19px;
+    padding-bottom: 30px;
+
+}
+
+.email {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.email:focus{
+    border: 3px solid rgba(103, 55, 9, 0.75);
+}
+
+.emailwrapper {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 40px;
+
+}
+.emailmsg {
+    font-family: 'Libre Baskerville', serif;
+    font-size: 13px;
+    display: none;
+    padding: 5px 5px 5px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.emailmsg.failure{
+    color: #d9534f;
+    background-color: #ffcccb;
+    display: block;
+}
+
+.spacebottom {
+    padding-bottom: 10px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+.button {
+    background-color: #98abc8;
+    font-family: 'Libre Baskerville', serif;
+    width: fit-content;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 10px;
+    transition: 0.15s;
+}
+
+.button:hover {
+    background-color: #4E3524;
+    color: white;
+}
+
+
+.socialmedia {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+/*Sitemap*/
+.sitemapwrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+
+.sitemap {
+    font-size: 16px;
+    list-style-type: none;
+    padding-inline-start: 0px;
+
+}
+
+.sitemap li {
+    font-family: 'Libre Franklin', sans-serif;
+    color: #673709;
+    line-height: 3.0;
+}
+
+.sitemap li img {
+    vertical-align: middle;
+}
+
+.sitemap li a {
+    text-decoration: none;
+    color: #673709;
+    transition: 0.15s;
+
+}
+
+.sitemap li a:hover {
+    color: #c89d98;
+}
+
+/*Copyright Line*/
+.copyright {
+    text-align: center;
+    font-family: 'Libre Franklin', sans-serif;
+    font-size: 10px;
+    padding: 5px 0;
+    background-color: #673709;
+    color: white;
+}

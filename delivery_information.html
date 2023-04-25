@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Delivery Information</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/delivery.css">
+    <script src="./js/delivery.js" async and defer></script>
+</head>
+
+<!--Header-->
+<header>
+    <div class="wrapper">
+        <a href="./home.html"><img src="./Icons/Logo.PNG" , alt="Logo" , class="logo"></a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="about_us.html"><b>About Us</b></a></li>
+                <li><a href="menu.html"><b>Menu</b></a></li>
+                <li><a href="contact_us.html"><b>Contact Us</b></a>
+            </ul>
+        </nav>
+        <div class="headerbutton">
+            <a href="./cart.html"><img src="./Icons/Shopping Cart.svg" alt="Cart" width="25" , height="25"></a>
+            <a href="./log_in.html"><img src="./Icons/Profile.svg" alt="Profile" width="25" , height="25"></a>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <div class="checkoutwrapper">
+        <!--Order Summary-->
+        <div class="ordersummary">
+            <h2><b>Order Summary</b></h2>
+            <div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Product</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="summarywrapper">
+                                <img src="./Cakes/Coffee Chiffon.jpg" alt="Coffee Chiffon Cake" width="auto"
+                                    height="70">
+
+                                <span>Coffee Chiffon Cake &times; 1</span>
+                            </td>
+                            <td>
+                                RM 10
+                            </td>
+
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th>Total</th>
+                            <td>RM 10</td>
+                        </tr>
+                    </tfoot>
+
+                </table>
+            </div>
+        </div>
+        <!--Delivery Info-->
+        <div class="midline">
+            <section>
+                <form name="delivery_form" id="delivery_form" onsubmit="return validate()">
+                    <h2><b>Delivery Information</b></h2>
+                    <div class="spaceleft">
+                        <label for="recipientName">Name: <span style="color: red;">*</span></label><br>
+                        <input type="text" placeholder="Eg: Matthew Doa" class="name" id="delivery_name"
+                            name="delivery_name" required
+                            oninvalid="this.setCustomValidity('Please enter your name')"
+                            oninput="this.setCustomValidity('')"><br><br>
+
+                        <label for="address">Address: <span style="color: red;">*</span></label><br>
+                        <textarea name="Address" placeholder="Eg: 9, Jalan Hujan Emas 6, Taman OUG" rows="3" cols="50"
+                            class="address" id="address" name="delivery_address" required
+                            oninvalid="this.setCustomValidity('Please enter your delivery address')"
+                            oninput="this.setCustomValidity('')"></textarea><br><br>
+
+                        <label for="postcode">Postcode: <span style="color: red;">*</span></label><br>
+                        <input type="text" placeholder="Eg: 58200" class="phone" id="postcode" name="postcode"
+                            required
+                            oninvalid="this.setCustomValidity('Please enter the postcode for the delivery address')"
+                            oninput="this.setCustomValidity('')" onkeypress="checkIsNum(event)"><br><br>
+
+                        <label for="state">State: <span style="color: red;">*</span></label><br>
+                        <select id="state" name="state" class="name" required
+                            oninvalid="this.setCustomValidity('Please select the state of the delivery address')"
+                            oninput="this.setCustomValidity('')">
+                            <option disabled selected value style="display: none;">Choose your state</option>
+                            <option value="Kuala Lumpur">Kuala Lumpur</option>
+                            <option value="Selangor">Selangor</option>
+                        </select><br><br>
+
+                        <label for="phoneNumber">Phone Number: <span style="color: red;">*</span></label><br>
+                        <input type="text" placeholder="Eg: 0120121183" class="phone" id="phone_number" name="phone_number" required
+                            oninvalid="this.setCustomValidity('Please enter your phone number')"
+                            oninput="this.setCustomValidity('')" onkeypress="checkIsNum(event)"><br><br>
+
+                        <label for="date">Date to Receive: <span style="color: red;">*</span></label><br>
+                        <input type="date" class="phone" id="date" name="date_to_receive" required
+                            oninvalid="this.setCustomValidity('Please enter your desired date to receive the product')"
+                            oninput="this.setCustomValidity('')"><br><br>
+                        <div class="deliveryinfo" id="delivery_info"></div>
+
+                        <button type="submit" class="button">Pay Now</button>
+                    </div>
+                </form>
+            </section>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="footer">
+        <!--Left side of footer (Join mailing list and follow socials)-->
+        <div class="socialswrapper">
+            <form name="subscribeForm" onsubmit="return ValidateEmail()">
+                <div class="emailwrapper">
+                    <span class="emailheadfont"><strong>Get Latest Updates from Us!</strong></span>
+                    <input type="email" placeholder="Your email" class="email" required id="email" name="email"
+                        oninvalid="this.setCustomValidity('Please enter your email address')"
+                        oninput="this.setCustomValidity('')">
+                    <div id="email_error" class="emailmsg"></div>
+                    <div class="spacebottom"></div>
+                    <button type="submit" class="button" value="Submit">Subscribe</button>
+                </div>
+            </form>
+            <span class="emailheadfont"><strong>Follow Us On Our Socials!</strong></span>
+            <div class="socialmedia">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Icons/Instagram Logo.png" alt="Ig Logo"
+                        width="auto" height="30"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Icons/Facebook Logo.png" alt="Fb Logo"
+                        width="auto" height="30"></a>
+            </div>
+        </div>
+        <!--Middle section of footer (sitemap)-->
+        <div class="sitemapwrapper">
+            <span class="headfont"><strong>Categories</strong></span>
+            <ul class="sitemap">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Logo + Contact Information-->
+        <div class="logowrapper">
+            <img src="./Icons/Logo.PNG" , alt="Logo" , class="logo">
+            <ul class="sitemap">
+                <li><img src="./Icons/phone-flip-solid.svg" alt="Phone Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;+60
+                    123
+                    456789</li>
+                <li><img src="./Icons/envelope-solid.svg" alt="Envelope Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;reminiscent@gmail.com</li>
+            </ul>
+        </div>
+
+    </div>
+    <span class="copyright"><i>Reminiscent Bakery &copy; All Rights Reserved.</i></span>
+</footer>
+
+
+</html>

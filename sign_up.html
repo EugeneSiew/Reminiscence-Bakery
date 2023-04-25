@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/log_in.css">
+    <style>
+        label {
+            padding-left: 15px;
+        }
+    </style>
+    <script src="./js/sign_up.js" async and defer></script>
+</head>
+
+<!--Header-->
+<header>
+    <div class="wrapper">
+        <a href="./home.html"><img src="./Icons/Logo.PNG" , alt="Logo" , class="logo"></a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="about_us.html"><b>About Us</b></a></li>
+                <li><a href="menu.html"><b>Menu</b></a></li>
+                <li><a href="contact_us.html"><b>Contact Us</b></a>
+            </ul>
+        </nav>
+        <div class="headerbutton">
+            <a href="./cart.html"><img src="./Icons/Shopping Cart.svg" alt="Cart" width="25" , height="25"></a>
+            <a href="./log_in.html"><img src="./Icons/Profile.svg" alt="Profile" width="25" , height="25"></a>
+        </div>
+    </div>
+</header>
+
+
+
+<main>
+    <div class="signupbox">
+        <a href="./log_in.html" class="close">&#10006;</a>
+        <h2>Sign Up</h2>
+        <div class="loginwrapper">
+            <div class="inputwrapper">
+                <div class="dividerline">
+                    <button type="button" class="button">Continue with Google&nbsp;&nbsp;&nbsp;&nbsp;<img
+                            src="./Icons/Google Logo.png" alt="Google Logo" width="15" height="15"
+                            class="icon"></button><br><br>
+                    <button type="button" class="button">Continue with Facebook&nbsp;&nbsp;&nbsp;&nbsp;<img
+                            src="./Icons/Facebook Logo.png" alt="Google Logo" width="15" height="15"
+                            class="icon"></button><br><br><br>
+                    <span class="orfont"><b>Or</b></span>
+                </div>
+                <form name="sign_up_form" id="sign_up_form" onsubmit="return validate()" action="log_in.html">
+                    <div class="useremail">
+                        <div class="signuphere"><b>Sign Up with Email</b></div>
+                        <div id="signup_info" class="logininfo"></div>
+                        <label for="name">Full Name: <span style="color: red;">*</span></label>
+                        <input type="text" placeholder="Eg: Eugene" class="input" id="sign_up_name" required
+                            name="user_login_name" oninvalid="this.setCustomValidity('Please enter your full name.')"
+                            oninput="this.setCustomValidity('')"><br><br>
+
+                        <label for="username">Username: <span style="color: red;">*</span></label>
+                        <input type="text" placeholder="Eg: Eugene3 (More than 5 characters)" class="input" id="username"
+                            name="user_login_username" required
+                            oninvalid="this.setCustomValidity('Please enter a username.')"
+                            oninput="this.setCustomValidity('')"><br><br>
+
+                        <label for="email">Email: <span style="color: red;">*</span></label>
+                        <input type="email" placeholder="Eg: reminiscent@gmail.com" class="input" id="sign_up_email"
+                            name="user_email" required oninvalid="this.setCustomValidity('Please enter your email address.')"
+                            oninput="this.setCustomValidity('')"><br><br>
+
+                        <label for="password">Password: <span style="color: red;">*</span></label>
+                        <input type="password" placeholder="Between 7 to 15 characters, include at least a number and a special character" class="input"
+                            id="sign_up_password" name="user_password" required
+                            oninvalid="this.setCustomValidity('Please enter your password.')"
+                            oninput="this.setCustomValidity('')"><br><br>
+
+                        <label for="confirm_password">Confirm Password: <span style="color: red;">*</span></label>
+                        <input type="password" placeholder="********" class="input" id="confirm_password"
+                            name="user_confirm_password" required
+                            oninvalid="this.setCustomValidity('Please confirm your password.')"
+                            oninput="this.setCustomValidity('')"><br>
+
+                        <div class="signupsubmit"><button type="submit" class="button">Submit</button></div>
+                    </div>
+                </form>
+            </div>
+        </div>
+</main>
+
+<footer>
+    <div class="footer">
+        <!--Left side of footer (Join mailing list and follow socials)-->
+        <div class="socialswrapper">
+            <form name="subscribeForm" onsubmit="return ValidateEmail()">
+                <div class="emailwrapper">
+                    <span class="emailheadfont"><strong>Get Latest Updates from Us!</strong></span>
+                    <input type="email" placeholder="Your email" class="email" required id="email" name="email"
+                        oninvalid="this.setCustomValidity('Please enter your email address')"
+                        oninput="this.setCustomValidity('')">
+                    <div id="email_error" class="emailmsg"></div>
+                    <div class="spacebottom"></div>
+                    <button type="submit" class="button" value="Submit">Subscribe</button>
+                </div>
+            </form>
+
+            <span class="emailheadfont"><strong>Follow Us On Our Socials!</strong></span>
+            <div class="socialmedia">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Icons/Instagram Logo.png" alt="Ig Logo"
+                        width="auto" height="30"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Icons/Facebook Logo.png" alt="Fb Logo"
+                        width="auto" height="30"></a>
+            </div>
+        </div>
+        <!--Middle section of footer (sitemap)-->
+        <div class="sitemapwrapper">
+            <span class="headfont"><strong>Categories</strong></span>
+            <ul class="sitemap">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Logo + Contact Information-->
+        <div class="logowrapper">
+            <img src="./Icons/Logo.PNG" , alt="Logo" , class="logo">
+            <ul class="sitemap">
+                <li><img src="./Icons/phone-flip-solid.svg" alt="Phone Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;+60
+                    123
+                    456789</li>
+                <li><img src="./Icons/envelope-solid.svg" alt="Envelope Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;reminiscent@gmail.com</li>
+            </ul>
+        </div>
+
+    </div>
+    <span class="copyright"><i>Reminiscent Bakery &copy; All Rights Reserved.</i></span>
+</footer>
+
+
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Reminiscent Bakery</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/home.css">
+    <script src="./js/basic.js" async and defer></script>
+</head>
+
+<!--Header-->
+<header>
+    <div class="wrapper">
+        <a href="./home.html"><img src="./Icons/Logo.PNG" , alt="Logo", class="logo"></a>
+        <nav>
+            <ul class="navbar">
+                <li><a href="home.html"><b>Home</b></a></li>
+                <li><a href="about_us.html"><b>About Us</b></a></li>
+                <li><a href="menu.html"><b>Menu</b></a></li>
+                <li><a href="contact_us.html"><b>Contact Us</b></a>
+            </ul>
+        </nav>    
+        <div class="headerbutton">
+            <a href="./cart.html"><img src="./Icons/Shopping Cart.svg" alt="Cart" width="25" , height="25"></a>
+            <a href="./log_in.html"><img src="./Icons/Profile.svg" alt="Profile" width="25", height="25"></a>
+        </div>
+    </div>
+</header>
+
+
+<main>
+    <!---Welcome Section-->
+    <section class="sectionspace">
+        <h2>Welcome</h2>
+        <div class="welcome">
+            <img src="./Icons/Welcome image.jpg" alt="Chiffon Cake" width="auto" , height="150">
+            <div class="flex-column">
+                <p>Welcome to Reminiscent Bakery! We specialize in light and fluffy chiffon cakes as well as soft swiss rolls
+                    that will sure to fulfill your sweet tooth!</p>
+                <a href="./about_us.html"><b>Learn More About Our Story</b></a>
+            </div>
+        </div>
+    </section>
+
+    <!--Menu Section-->
+    <section class="sectionspace">
+        <h2><b>Our Cakes</b></h2>
+        <div class="ourcakes">
+            <figure>
+                <img src="./Icons/Welcome image.jpg" alt="Chiffon Cake" width="auto" , height="150">
+                <figcaption class="caption"><a href="menu.html#chiffon"><strong>Chiffon Cake</strong></a></figcaption>
+            </figure>
+            <figure>
+                <img src="./Cakes/Original Swiss Roll.jpg" alt="Swiss Roll" width="auto" , height="150">
+                <figcaption class="caption"><a href="menu.html#swissroll"><strong>Swiss Roll</strong></a></figcaption>
+            </figure>
+        </div>
+    </section>
+
+    <!--Customer Review-->
+    <section>
+        <h2><b>What Our Customers Say</b></h2>
+        <div class="review">
+            <figure class="centerpic">
+                <img src="./Cakes/Pandan Chiffon.jpg" alt="Pandan Chiffon Cake" width="auto" , height="100">
+                <figcaption class="caption">
+                    <a href="Cake Description/Pandan_Chiffon.html"><h3>Pandan Chiffon Cake</h3></a>
+                    <p>&quot;The cake was really light and airy with a strong pandan fragrance. Will definitely purchase again.&quot;
+                    </p></figcaption>
+            </figure>
+            <figure class="centerpic">
+                <img src="./Cakes/Earl Grey Chiffon.jpg" alt="Earl Grey Chiffon" width="auto" , height="100">
+                <figcaption class="caption">
+                    <a href="Cake Description/Earl_Grey_Chiffon.html"><h3>Earl Grey Chiffon Cake</h3></a> 
+                    <p>&quot;Really nice earl grey flavour, finished it in less than a day!&quot;</p>
+                </figcaption>
+            </figure>
+            <figure class="centerpic">
+                <img src="./Cakes/Kaya Swiss Roll.JPG" alt="Kaya Swiss Roll" width="auto" , height="100">
+                <figcaption class="caption">
+                    <a href="Cake Description/Kaya_Swiss_Roll.html"><h3>Kaya Swiss Roll</h3></a>
+                    <p>&quot;Not too sweet and the kaya tastes homemade. Together with the cake it's super nice.&quot;</p>
+                </figcaption>
+            </figure>
+            <figure class="centerpic">
+                <img src="./Cakes/Matcha Swiss Roll.jpg" alt="Matcha Swiss Roll" width="auto" , height="125">
+                <figcaption class="caption">
+                    <a href="Cake Description/Matcha_Swiss_Roll.html"><h3>Matcha Swiss Roll</h3></a>
+                    <p>&quot;Authentic matcha flavour, reccommended to all matcha lovers out there!&quot;</p>
+                </figcaption>
+            </figure>
+           
+            
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="footer">
+        <!--Left side of footer (Join mailing list and follow socials)-->
+        <div class="socialswrapper">
+            <form name="subscribeForm" onsubmit="return ValidateEmail()">
+                <div class="emailwrapper">
+                    <span class="emailheadfont"><strong>Get Latest Updates from Us!</strong></span>
+                    <input type="email" placeholder="Your email" class="email" required id="email" name="email"
+                        oninvalid="this.setCustomValidity('Please enter your email address')"
+                        oninput="this.setCustomValidity('')">
+                    <div id="email_error" class="emailmsg"></div>
+                    <div class="spacebottom"></div>
+                    <button type="submit" class="button" value="Submit">Subscribe</button>
+                </div>
+            </form>
+            <span class="emailheadfont"><strong>Follow Us On Our Socials!</strong></span>
+            <div class="socialmedia">
+                <a href="https://www.instagram.com/" target="_blank"><img src="./Icons/Instagram Logo.png" alt="Ig Logo" width="auto" height="30"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img src="./Icons/Facebook Logo.png" alt="Fb Logo" width="auto" height="30"></a>
+            </div>
+        </div>
+        <!--Middle section of footer (sitemap)-->
+        <div class="sitemapwrapper">
+            <span class="headfont"><strong>Categories</strong></span>
+            <ul class="sitemap">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact_us.html">Contact Us</a></li>
+            </ul>
+        </div>
+        <!--Logo + Contact Information-->
+        <div class="logowrapper">
+            <img src="./Icons/Logo.PNG" , alt="Logo", class="logo">
+            <ul class="sitemap">
+                <li><img src="./Icons/phone-flip-solid.svg" alt="Phone Sign" width="20" height="20">&nbsp;&nbsp;&nbsp;&nbsp;+60
+                    123
+                    456789</li>
+                <li><img src="./Icons/envelope-solid.svg" alt="Envelope Sign" width="20"
+                        height="20">&nbsp;&nbsp;&nbsp;&nbsp;reminiscent@gmail.com</li>
+            </ul>
+        </div>
+
+    </div>
+    <span class="copyright"><i>Reminiscent Bakery &copy; All Rights Reserved.</i></span>
+</footer>
+
+</html>
